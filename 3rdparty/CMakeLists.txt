@@ -1,9 +1,9 @@
 # 设置安装目录
 get_property(XXNP_INSTALL_PATH GLOBAL PROPERTY XXNP_INSTALL_PATH)
 
-file(COPY "${CMAKE_SOURCE_DIR}/3rdparty/RmlUi-6.0/Samples/assets" DESTINATION "${CMAKE_BINARY_DIR}")
-file(COPY "${CMAKE_SOURCE_DIR}/3rdparty/RmlUi-6.0/Samples/basic" DESTINATION "${CMAKE_BINARY_DIR}")
-file(COPY "${CMAKE_SOURCE_DIR}/3rdparty/RmlUi-6.0/Samples/lua_invaders" DESTINATION "${CMAKE_BINARY_DIR}")
+#file(COPY "${CMAKE_SOURCE_DIR}/3rdparty/RmlUi-6.0/Samples/assets" DESTINATION "${CMAKE_BINARY_DIR}")
+#file(COPY "${CMAKE_SOURCE_DIR}/3rdparty/RmlUi-6.0/Samples/basic" DESTINATION "${CMAKE_BINARY_DIR}")
+#file(COPY "${CMAKE_SOURCE_DIR}/3rdparty/RmlUi-6.0/Samples/lua_invaders" DESTINATION "${CMAKE_BINARY_DIR}")
 file(COPY "${CMAKE_SOURCE_DIR}/3rdparty/Binary-library/widows-x64/lua/" DESTINATION "${CMAKE_BINARY_DIR}")
 file(COPY "${CMAKE_SOURCE_DIR}/3rdparty/Binary-library/widows-x64/runtime/" DESTINATION "${CMAKE_BINARY_DIR}")
 file(GLOB FREETYPE_DLL_FILES "${CMAKE_SOURCE_DIR}/3rdparty/Binary-library/widows-x64/freetype/*.dll")

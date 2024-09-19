@@ -1,13 +1,20 @@
 <rml>
 	<head>
 		<title>Demo</title>
-		<link type="text/template" href="/assets/window.rml" />
 		<style>
 			body
 			{
 				width: 300px;
 				height: 225px;
-
+				/*font-family: LatoLatin;*/
+				/*font-family: Fira Code;*/
+				font-family: Source Han Sans SC;
+				/*font-weight: normal;*/
+				/*font-style: normal;*/
+				/*font-style: normal;*/
+				font-size: 18dp;
+				color: white;
+				nav: auto;
 				margin: auto;
 			}
 
@@ -19,7 +26,18 @@
 			}
 		</style>
 	</head>
-	<body template="window">
-		<svg src="tiger.svg"></svg>
+	<body>
+	<div id="title">
+	</div>
+	<div >
+		的的的啊a手动阀手a动阀手d动阀手b动阀a手动阀第三方
+	</div>
+	<div >
+		SVGsvgSVGsvgSVGsvgSVGsvgSVGsvgSVGsvgSVGsvgSVGsvg
+	</div>
+	<div >
+		的的的啊a手动阀手a动阀手d动阀手b动阀a手动阀第三方
+	</div>
+
 	</body>
 </rml>

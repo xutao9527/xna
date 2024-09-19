@@ -9,7 +9,8 @@
 
 static Rml::UniquePtr<ShellFileInterface> file_interface;
 
-bool Shell::Initialize() {
+bool Shell::Initialize()
+{
     auto findRootFile = [] {
         char executable_file_name[MAX_PATH];
         if (GetModuleFileName(nullptr, executable_file_name, MAX_PATH) >= MAX_PATH &&
@@ -30,28 +31,41 @@ bool Shell::Initialize() {
     return true;
 }
 
-void Shell::Shutdown() {
+void Shell::Shutdown()
+{
     file_interface.reset();
 }
 
 
 void Shell::LoadFonts()
 {
-    const Rml::String directory = "assets/";
+    const Rml::String directory = "resources/assets/";
 
-    struct FontFace {
-        const char* filename;
+    struct FontFace
+    {
+        const char *filename;
         bool fallback_face;
     };
     FontFace font_faces[] = {
-            {"LatoLatin-Regular.ttf", false},
-            {"LatoLatin-Italic.ttf", false},
-            {"LatoLatin-Bold.ttf", false},
-            {"LatoLatin-BoldItalic.ttf", false},
-            {"NotoEmoji-Regular.ttf", true},
+        {"SourceHanSansSC-Regular.ttf", false},
+        {"SourceHanSansSC-Bold.ttf",    false},
+        // {"SourceHanSansSC-Light.ttf",    false},
+        // {"SourceHanSansSC-ExtraLight.ttf",    false},
+        // {"SourceHanSansSC-Heavy.ttf",    false},
+        // {"SourceHanSansSC-Medium.ttf",    false},
+        // {"SourceHanSansSC-Normal.ttf", true},
+
+        // {"SourceHanSansSC-Normal.ttf",     false},
+        // {"simhei.ttf",     false},
+        // {"SourceHanSansSC-Regular-2.otf",     false},
+        // {"FiraCode-Bold.ttf",        false},
+        // {"FiraCode-Light.ttf",       false},
+        // {"FiraCode-Medium.ttf",      false},
+        // {"FiraCode-Retina.ttf",      false},
     };
 
-    for (const FontFace& face : font_faces)
+
+    for (const FontFace &face: font_faces)
         Rml::LoadFontFace(directory + face.filename, face.fallback_face);
 }
 

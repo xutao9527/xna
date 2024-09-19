@@ -16,7 +16,7 @@ public:
         }
         if (Rml::ElementDocument *document = context->LoadDocument("resources/assets/ui_dbg_window.rml")) {
             document->Show();
-            document->GetElementById("title")->SetInnerRML("SVG");
+            document->GetElementById("title")->SetInnerRML("SVGsvgSVGsvg");
         }
         Rml::Debugger::Initialise(context);
     }
